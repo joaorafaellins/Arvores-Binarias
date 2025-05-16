@@ -1,0 +1,13 @@
+public class No {
+    private int valor;
+    private No direito;
+    private No esquerdo;
+
+    public No (int valor){
+        this.valor = valor;
+        this.direito = null;
+        this.esquerdo=null;
+    }
+
+    
+}
