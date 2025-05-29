@@ -1,0 +1,29 @@
+class Node {
+    int valor;
+    Node esquerda, direita;
+
+    Node(int valor) {
+        this.valor = valor;
+        esquerda = direita = null;
+    }
+}
+
+public class ArvoreBinaria {
+
+    public static int contarNosFolha(Node raiz) {
+        if (raiz == null) {
+            return 0;
+        }
+        if (raiz.esquerda == null && raiz.direita == null) {
+            return 1;
+        }
+        return contarNosFolha(raiz.esquerda) + contarNosFolha(raiz.direita);
+    }
+
+    public static void main(String[] args) {
+        Node raiz = new Node(10);
+        raiz.esquerda = new Node(5);
+        raiz.direita = new Node(15);
+        raiz.esquerda.esquerda = new Node(3);
+        raiz.esquerda.direita = new Node(7);
+        raiz.direita.dir
